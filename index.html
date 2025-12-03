@@ -1,149 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-
-<Title>2025 Christmas Wishlist</Title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lilah's 2025 Christmas Wishlist</title>
   <style>
     :root{
       --bg:#eaf6ff;
       --card:#ffffff;
       --accent:#1f6feb;
       --shadow:0 6px 18px rgba(16,24,40,0.08);
-          }
-      *{box-sizing:border-box}
-     body{letter-spacing:-0.02em;}
-p.lead{margin:0;color:#475569}
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:#0f172a;
+      display:flex;
+      min-height:100vh;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 20px;
+    }
+    .container{
+      max-width:900px;
+      width:100%;
+    }
+    header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size:clamp(20px,4vw,36px);
+      letter-spacing:-0.02em;
+    }
+    p.lead{margin:0;color:#475569}
 
-<!-- my grid of squares for gifts -->
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-@media (max-width:720px){
-.grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:420px){
-.grid{grid-template-columns:1fr}
-}
+    <!-- grid of squares -->
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    @media (max-width:720px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:420px){
+      .grid{grid-template-columns:1fr}
+    }
 
-.card{
-background:var(--card);
-border-radius:14px;
-padding:12px;
-box-shadow:var(--shadow);
-display:flex;
-flex-direction:column;
-align-items:stretch;
-transition:transform 180ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms;
-text-decoration:none;
-color:inherit;
-overflow:hidden;
-min-height:170px;
-}
-.card:hover{
-transform:scale(1.04);
-box-shadow:0 12px 30px rgba(16,24,40,0.12);
-}
-.card img{
-width:100%;
-height:120px;
-object-fit:cover;
-border-radius:8px;
-display:block;
-margin-bottom:10px;
-background:linear-gradient(90deg,#f3f4f6,#eef2ff);
-}
-.card .title{
-font-weight:600;
-font-size:15px;
-margin-bottom:6px;
-}
-.card .links{
-margin-top:auto;
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-}
-.card .links a{
-font-size:13px;
-padding:6px 8px;
-background:rgba(31,111,235,0.08);
-color:var(--accent);
-border-radius:8px;
-text-decoration:none;}
-.hint{font-size:13px;color:#64748b;margin-top:12px;text-align:center}
-.card:focus{outline:3px solid rgba(31,111,235,0.12)}
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:12px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      transition:transform 180ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms;
+      text-decoration:none;
+      color:inherit;
+      overflow:hidden;
+      min-height:170px;
+    }
+    .card:hover{
+      transform:scale(1.04);
+      box-shadow:0 12px 30px rgba(16,24,40,0.12);
+    }
+    .card img{
+      width:100%;
+      height:120px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+      margin-bottom:10px;
+      background:linear-gradient(90deg,#f3f4f6,#eef2ff);
+    }
+    .card .title{
+      font-weight:600;
+      font-size:15px;
+      margin-bottom:6px;
+    }
+    .card .links{
+      margin-top:auto;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .card .links a{
+      font-size:13px;
+      padding:6px 8px;
+      background:rgba(31,111,235,0.08);
+      color:var(--accent);
+      border-radius:8px;
+      text-decoration:none;
+    }
+    .hint{font-size:13px;color:#64748b;margin-top:12px;text-align:center}
+
+    <!-- small focus styles -->
+    .card:focus{outline:3px solid rgba(31,111,235,0.12)}
   </style>
 </head>
-   <body>
-<div class="container">
-<header>
-<h1>2025 Christmas Wishlist</h1>
-<p class="lead">Click any square to open the main product page. Add your item links and image URLs below.</p>
-</header>
-<main>
-<section class="grid">
-<!-- Duplicate these .card blocks (6 total). Replace href and src with your item URLs/images and change the visible text. -->
+<body>
+  <div class="container">
+    <header>
+      <h1>2025 Christmas Wishlist</h1>
+      <p class="lead">Click any square to open the main product page</p>
+    </header>
 
-<a class="card" href="https://example.com/item1" target="_blank" rel="noopener noreferrer">
-<img src="https://via.placeholder.com/600x400?text=Item+1+Image" alt="Item 1 image">
-<div class="title">Item 1 — Friendly name</div>
-<div class="links">
-<a href="https://example.com/item1" target="_blank" rel="noopener noreferrer">Product page</a>
-<a href="https://via.placeholder.com/600x400?text=Item+1+Image" target="_blank" rel="noopener noreferrer">Image URL</a>
-</div>
-</a>
+    <main>
+      <section class="grid">
 
-<a class="card" href="https://example.com/item2" target="_blank" rel="noopener noreferrer">
-<img src="https://via.placeholder.com/600x400?text=Item+2+Image" alt="Item 2 image">
-<div class="title">Item 2 — Friendly name</div>
-<div class="links">
-<a href="https://example.com/item2" target="_blank" rel="noopener noreferrer">Product page</a>
-<a href="https://via.placeholder.com/600x400?text=Item+2+Image" target="_blank" rel="noopener noreferrer">Image URL</a>
-</div>
-</a>
+        <a class="card" href="https://www.freepeople.com/shop/mountain-high-half-zip-fleece/?color=060&type=REGULAR&quantity=1" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.urbndata.com/is/image/FreePeople/78709474_060_a/?$redesign-zoom-5x$" alt="Red Fleece">
+          <div class="title">Item 1 — Fleece</div>
+          <div class="links">
+            <a href="https://www.freepeople.com/shop/mountain-high-half-zip-fleece/?color=060&type=REGULAR&quantity=1" target="_blank" target="_blank" rel="noopener noreferrer">Product page</a>
+            <a href="https://images.urbndata.com/is/image/FreePeople/78709474_060_a/?$redesign-zoom-5x$" target="_blank" rel="noopener noreferrer">Image URL</a>
+          </div>
+        </a>
 
-<a class="card" href="https://example.com/item3" target="_blank" rel="noopener noreferrer">
-<img src="https://via.placeholder.com/600x400?text=Item+3+Image" alt="Item 3 image">
-<div class="title">Item 3 — Friendly name</div>
-<div class="links">
-<a href="https://example.com/item3" target="_blank" rel="noopener noreferrer">Product page</a>
-<a href="https://via.placeholder.com/600x400?text=Item+3+Image" target="_blank" rel="noopener noreferrer">Image URL</a>
-</div>
-</a>
 
-<a class="card" href="https://example.com/item4" target="_blank" rel="noopener noreferrer">
-<img src="https://via.placeholder.com/600x400?text=Item+4+Image" alt="Item 4 image">
-<div class="title">Item 4 — Friendly name</div>
-<div class="links">
-<a href="https://example.com/item4" target="_blank" rel="noopener noreferrer">Product page</a>
-<a href="https://via.placeholder.com/600x400?text=Item+4+Image" target="_blank" rel="noopener noreferrer">Image URL</a>
-</div>
-</a>
-
-<a class="card" href="https://example.com/item5" target="_blank" rel="noopener noreferrer">
-<img src="https://via.placeholder.com/600x400?text=Item+5+Image" alt="Item 5 image">
-<div class="title">Item 5 — Friendly name</div>
-<div class="links">
-<a href="https://example.com/item5" target="_blank" rel="noopener noreferrer">Product page</a>
-<a href="https://via.placeholder.com/600x400?text=Item+5+Image" target="_blank" rel="noopener noreferrer">Image URL</a>
-</div>
-</a>
-
-<a class="card" href="https://example.com/item6" target="_blank" rel="noopener noreferrer">
-<img src="https://via.placeholder.com/600x400?text=Item+6+Image" alt="Item 6 image">
-<div class="title">Item 6 — Friendly name</div>
-<div class="links">
-<a href="https://example.com/item6" target="_blank" rel="noopener noreferrer">Product page</a>
-<a href="https://via.placeholder.com/600x400?text=Item+6+Image" target="_blank" rel="noopener noreferrer">Image URL</a>
-</div>
-</a>
-
-</section>
-
-<p class="hint">Tip: edit the <code>href</code> and the <code>&lt;img src="..."&gt;</code> values to point to your real product pages and images.</p>
-</main>
-</div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
